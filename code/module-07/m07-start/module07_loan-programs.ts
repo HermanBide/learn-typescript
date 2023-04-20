@@ -1,7 +1,15 @@
 /*  TODO Add the import statement. */
+interface Loan {
+    principle: number;
+    interestRate: number;
+}
+
+interface ConventionalLoan extends Loan {
+    months: number;
+}
 
 /*  TODO Update the calculateInterestOnlyLoanPayment function. */
-function calculateInterestOnlyLoanPayment(loanTerms: Loan): string {
+const calculateInterestOnlyLoanPayment = (loanTerms: Loan): string => {
     let payment: number;
     payment = loanTerms.principle * calculateInterestRate(loanTerms.interestRate);
     return 'The interest only loan payment is ' + payment.toFixed(2);
