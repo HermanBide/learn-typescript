@@ -43,7 +43,12 @@ items.AddOrUpdate(2, 89);
 console.log(items.GetData(0));
 
 // TODO Test items as objects.
-let cats = new DataStore<Cats>();
+type Cats = {
+    type: string;
+    name: string;
+}
+
+const cats = new DataStore<Cats>();
 cats.AddOrUpdate(0, {type: 'lion', name: 'simba'});
 cats.AddOrUpdate(1, {type: 'tiger', name: 'luffy'});
 console.log(cats.GetData(1));

@@ -60,10 +60,7 @@ private sortAscending = (a: number, b: number) => {
 /*  buildArray builds an array of unique random numbers containing the number of items 
 based on the number passed to it. The sortOrder parameter determines whether to sort 
 the array in ascending or descending order. */
-buildArray(
-    items: number,
-    sortOrder: "ascending" | "descending"
-    ): number[] {
+buildArray(items: number, sortOrder: "ascending" | "descending"): number[] {
         let randomNumbers: number[] = [];
         let nextNumber: number;
         for (let counter = 0; counter < items; counter++) {
